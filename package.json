@@ -10,7 +10,7 @@
   "scripts": {
     "test": "rollup -c rollup.config.test.ts --configPlugin @rollup/plugin-typescript",
     "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "prepublishOnly": "pnpm bulid"
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
