@@ -1,0 +1,29 @@
+{
+  "name": "@zhuh/rollup-plugin-lightningcss",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/plugin.mjs",
+  "types": "dist/plugin.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "rollup -c rollup.config.test.ts --configPlugin @rollup/plugin-typescript",
+    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "prepublishOnly": "pnpm bulid"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.12.7",
+    "rollup": "^4.17.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-pluginutils": "^2.8.2",
+    "tslib": "^2.6.2"
+  },
+  "dependencies": {
+    "@zhuh/style-inject": "^1.0.0",
+    "lightningcss": "^1.24.1"
+  }
+}
