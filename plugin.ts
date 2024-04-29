@@ -41,23 +41,23 @@ export const lightningcssPlugin= (option: ILightningcssPluginOption = {}): Plugi
     transform(code, id) {
       if(!filter(id) || code.trim() === '') return
 
+      console.debug('\x1b[1;38;2;255;203;78m%s\x1b[0m',`⚡ [lightningcss] Processing ${id}...`)
+
       const result = lightningcssTransform({
         minify: true,
-        // ...lightningcssOptions,
+        ...lightningcssOptions,
         filename: id,
       })
 
-      console.log(id)
-      
       if(result.code.toString().trim() === '') return
 
       if(result.warnings.length > 0) {
-        result.warnings.forEach((w) => console.warn(w))
+        result.warnings.forEach((w) => console.debug('\x1b[1;38;2;255;203;78m%s\x1b[0m',`⚡ [lightningcss] Warning ${w.message} at ${w.loc} ${w.type}-${w.value}...`))
       }
 
       if(inject) {
         return {
-          code: `$zh_styleInject(\'${result.code.toString()}\', {
+          code: `$zh_styleInject(\`${result.code.toString()}\`, {
   target: ${injectOptions?.target},
   tag: '${injectOptions?.tag}',
 })`,

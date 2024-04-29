@@ -1,5 +1,40 @@
-@import url(./test2.css);
-
-p {
-  color: red;
+.d2mipt {
+  position: relative;
+}
+.d2miptsicon,
+.d2mipteicon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.d2miptsicon {
+  left: 0;
+  margin-left: 10px;
+}
+.d2mipteicon {
+  right: 0;
+  margin-right: 10px;
+}
+.d2mipt.iptsicon input {
+  padding-left: 2.5rem;
+}
+.d2mipt.ipteicon input {
+  padding-right: 2.5rem;
+}
+.d2mipt input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #E9E9E9;
+  padding: 10px;
+  outline-color: #058373;
+}
+.d2mipt input:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.d2mipt input:not(:disabled):hover {
+  border-color: #058373;
 }
