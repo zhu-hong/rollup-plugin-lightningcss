@@ -1,8 +1,8 @@
 {
   "name": "@zhuh/rollup-plugin-lightningcss",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
-  "main": "dist/plugin.mjs",
+  "main": "dist/plugin.js",
   "types": "dist/plugin.d.ts",
   "files": [
     "dist"
