@@ -1,6 +1,6 @@
 {
   "name": "@zhuh/rollup-plugin-lightningcss",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/plugin.js",
   "types": "dist/plugin.d.ts",
@@ -19,11 +19,11 @@
     "@types/node": "^20.12.7",
     "rollup": "^4.17.0",
     "rollup-plugin-dts": "^6.1.0",
-    "rollup-pluginutils": "^2.8.2",
     "tslib": "^2.6.2"
   },
   "dependencies": {
     "@zhuh/style-inject": "^1.0.0",
-    "lightningcss": "^1.24.1"
+    "lightningcss": "^1.24.1",
+    "rollup-pluginutils": "^2.8.2"
   }
 }
