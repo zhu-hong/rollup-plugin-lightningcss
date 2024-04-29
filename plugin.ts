@@ -1,6 +1,6 @@
 import type { Plugin } from 'rollup'
-import { createFilter } from 'rollup-pluginutils'
-import type { CreateFilter } from 'rollup-pluginutils'
+import { createFilter } from '@rollup/pluginutils'
+import type { CreateFilter } from '@rollup/pluginutils'
 import { bundle as lightningcssTransform } from 'lightningcss'
 import type { BundleOptions, CustomAtRules } from 'lightningcss'
 import { basename } from 'node:path'
@@ -30,11 +30,13 @@ export const lightningcssPlugin= (option: ILightningcssPluginOption = {}): Plugi
     exclude,
   )
 
+  const injectStyleFuncName = '$zh_styleInject'
+
   return {
     name: 'lightningcss-plugin',
     intro() {
       if(inject) {
-        return `import { styleInject as $zh_styleInject } from '@zhuh/style-inject'`
+        return `import { styleInject as ${injectStyleFuncName} } from '@zhuh/style-inject'`
       }
       return ''
     },
@@ -57,7 +59,7 @@ export const lightningcssPlugin= (option: ILightningcssPluginOption = {}): Plugi
 
       if(inject) {
         return {
-          code: `$zh_styleInject(\`${result.code.toString()}\`, {
+          code: `${injectStyleFuncName}(\`${result.code.toString()}\`, {
   target: ${injectOptions?.target},
   tag: '${injectOptions?.tag}',
 })`,

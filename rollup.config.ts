@@ -7,7 +7,7 @@ import { dts } from 'rollup-plugin-dts'
 export default [
   defineConfig({
     input: './plugin.ts',
-    external: ['rollup-pluginutils', 'lightningcss'],
+    external: ['@rollup/pluginutils', 'lightningcss'],
     plugins: [
       commonjs(),
       nodeResolve(),
