@@ -1,5 +1,8 @@
 .d2mipt {
   position: relative;
+  p {
+    font-size: 32px;
+  }
 }
 .d2miptsicon,
 .d2mipteicon {

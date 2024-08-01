@@ -4,9 +4,7 @@ import { lightningcssPlugin } from './plugin'
 export default defineConfig({
   plugins: [
     lightningcssPlugin({
-      inject: false,
       injectOptions: {
-        target: `document.querySelector('head')`,
         tag: 'lightningcss',
       },
     }),
