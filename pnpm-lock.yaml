@@ -12,8 +12,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0(rollup@4.19.1)
       '@zhuh/style-inject':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       lightningcss:
         specifier: ^1.25.1
         version: 1.25.1
@@ -194,8 +194,8 @@ packages:
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
 
-  '@zhuh/style-inject@1.0.0':
-    resolution: {integrity: sha512-MSt38Bgh/siX2jlLfCzbcSGvaUloTN2ajzzIyBB5JRH5ugkMB7kTHixEYz+rDbAJ6dQKMVD87JLzJ4PdIiqpzA==}
+  '@zhuh/style-inject@1.0.1':
+    resolution: {integrity: sha512-mo06qrcxzYyxsYVLF8BmpetnAtZ9vpEDDmoe+0OUh7saJLN9ctuncpQdZgUahriFwu3AsRSSswHn9Ca5BbJk4Q==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -623,7 +623,7 @@ snapshots:
 
   '@types/resolve@1.20.2': {}
 
-  '@zhuh/style-inject@1.0.0': {}
+  '@zhuh/style-inject@1.0.1': {}
 
   ansi-regex@5.0.1: {}
 
